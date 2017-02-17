@@ -8,7 +8,7 @@
 
 本文默认大家掌握一些react和flux架构的相关知识，也用过或者了解过redux，所以并不会从最基础的讲起，而是直接对redux进行总结。如果没有用过redux，最好可以先看[这里](http://cn.redux.js.org/index.html)
 
-想要理解redux，我们首先要了解redux的一些设计原则：
+想要理解redux，我们首先要总结redux的一些设计原则：
 
 * 单一数据源
 
