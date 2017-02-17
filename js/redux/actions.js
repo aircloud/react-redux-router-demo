@@ -8,9 +8,8 @@ export const EXAMPLE = "EXAMPLE";
 
 export const actions = {
 
-    receiveAllarticle : jsonText =>({
+    receiveAllarticle : () =>({
         type:EXAMPLE,
-        content:jsonText
     })
 
-}
+};

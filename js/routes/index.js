@@ -10,11 +10,11 @@ import Frame from '../layouts/Frame';
 import Home from '../views/Home';
 import Detail from '../views/Detail';
 
-const routes = browserHistory => (
-    <Router history={browserHistory}>
+const routes = hashHistory => (
+    <Router history={hashHistory}>
         <Route path="/" component={Frame}>
             <IndexRoute component={Home} />
-            <Route path="/detail/" component={Detail} />
+            <Route path="detail" component={Detail} />
         </Route>
     </Router>
 );

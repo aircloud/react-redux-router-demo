@@ -10,13 +10,20 @@ import { push } from 'react-router-redux';
 
 @connect(state => {
     return {
-        info: state.info,
+        info: state.rootReducer.getInfo.info,
     };
 }, {
     push,
     ...actions,
 })
 class Home extends React.Component {
+
+    componentDidMount() {
+        console.log("this.props.receiveAllarticle.toString()",this.props.receiveAllarticle.toString())
+        // this.props.receiveAllarticle();
+        console.log(this.props,"this.props")
+    }
+
 
     handleNavigate() {
         this.props.push(`/detail/`);

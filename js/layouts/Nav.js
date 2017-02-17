@@ -6,14 +6,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class Nav extends React.Component {
-    render() {
-        return (
-            <nav>
-                <Link to="/">Home</Link>
-            </nav>
-        );
-    }
-}
+const  Nav = (props) =>
+        <nav>
+            <h3>欢迎浏览我的demo</h3>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/detail">detail</Link></li>
+            </ul>
+        </nav>;
 
 export default Nav;

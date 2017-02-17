@@ -3,22 +3,27 @@
  * All right reserved
  * IF you have any question please email onlythen@yeah.net
  */
+import { combineReducers } from 'redux'
 
 const initialState = {
    info:"This is the initial infomation"
 };
 
-export default function previewList(state = initialState, action) {
+const getInfo = (state = initialState, action = "") => {
     switch (action.type) {
-        // case LOAD_ARTICLES: {
-        //     return {
-        //         ...state,
-        //         loading: true,
-        //         error: false,
-        //     };
-        // }
-
+        case 'EXAMPLE':
+            return{
+                info:"This is the example infomation"
+            };
         default:
             return state;
     }
-}
+};
+
+const rootReducer = combineReducers({
+    getInfo
+});
+
+console.log("rootReducer1",rootReducer.info,getInfo());
+
+export default rootReducer;

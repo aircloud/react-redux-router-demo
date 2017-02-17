@@ -7,10 +7,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { actions } from '../redux/actions';
 import { push } from 'react-router-redux';
+import ContactForm from "./ContactForm";
 
 @connect(state => {
     return {
-        info: state.info,
+        info: state.rootReducer.getInfo.info,
     };
 }, {
     push,
@@ -18,8 +19,16 @@ import { push } from 'react-router-redux';
 })
 class Detail extends React.Component {
 
+    componentWillMount() {
+        this.props.receiveAllarticle();
+    }
+
     handleNavigate() {
         this.props.push(`/`);
+    }
+
+    handleSubmit(){
+
     }
 
     render() {
@@ -29,6 +38,7 @@ class Detail extends React.Component {
             <div>
                 <h1>{this.props.info}</h1>
                 <p onClick={this.handleNavigate.bind(this)}>Go to the Home page</p>
+                <ContactForm />
             </div>
         );
     }

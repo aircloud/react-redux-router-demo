@@ -6,20 +6,14 @@
 import React from 'react';
 import Nav from './Nav';
 
-class Frame extends React.Component {
-    render() {
-        return (
-            <div className="frame">
-                <h3>欢迎浏览我的demo</h3>
-                <div className="header">
-                    <Nav />
-                </div>
-                <div className="container">
-                    {this.props.children}
-                </div>
-            </div>
-        );
-    }
-}
+const Frame = (props) =>
+       <div className="frame">
+           <div className="header">
+               <Nav />
+           </div>
+           <div className="container">
+               {props.children}
+           </div>
+       </div>;
 
 export default Frame;
